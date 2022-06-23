@@ -7,12 +7,15 @@ module.exports = {
   testMatch: ['**/specs/*.spec.*'],
   testRunner: 'jest-jasmine2',
   setupFilesAfterEnv: ['jest-allure/dist/setup'],
-  reporters: [
-    'default',
-    'jest-html-reporters',
-  ],
   globals: {
     testTimeout: 50000,
   },
+  reporters: [
+    'default',
+    ['jest-html-reporters', {
+      filename: 'report.html',
+      openReport: true,
+    }],
+  ],
   verbose: true,
 };
