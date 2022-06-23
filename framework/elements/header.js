@@ -1,14 +1,13 @@
-const searchInput = '#basic-search-field-small';
-const sagest = '#headerSearch';
+const browseAPI = '#headerContent > li:nth-child(5) > a';
 
 
 const Header = {
-    SearchText: async (page, text) => {
-        await page.click(searchInput);
-        await page.fill(text);
-        await page.waitForSelector(sagest);
-        const popupText = await page.textContent(success);
-        return popupText;
+    getActiveHeader: async (page) => {
+        await page.click(browseAPI);
+        await page.waitForTimeout(1000);
+        const element = await page.locator(browseAPI);
+        const className = await element.getAttribute('class');
+        return className;
     },
 }
 
