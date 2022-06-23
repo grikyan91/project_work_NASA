@@ -14,9 +14,9 @@ describe ('UI тесты для NasaApi', () => {
         await stop();
     });
 
-    it ('Получаем активный таб', async () => { 
+    it ('Проверяем активизацию таба в шапке', async () => { 
         const activeHeader = await app().Header().getActiveHeader(page);
-        assert.equal(activeHeader, 'usa-nav-link currentDiv' , 'Не активен нужный таб в шапке');
+        assert.equal(activeHeader, 'usa-nav-link currentDiv' , 'После клика на таб он не стал активен');
     });
 
 });
