@@ -1,12 +1,14 @@
 module.exports = {
   testEnvironment: 'node',
-  reporters: [
-    'default'],
   moduleFileExtensions: ['js', 'json'],
   transform: {
     '^.+\\.jsx?$': 'babel-jest',
   },
   testMatch: ['**/specs/*.spec.*'],
+  reporters: [
+    'default',
+    'jest-html-reporters',
+  ],
   globals: {
     testTimeout: 50000,
   },

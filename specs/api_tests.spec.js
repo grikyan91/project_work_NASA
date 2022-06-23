@@ -8,10 +8,10 @@ describe('API тесты на сервис NASA', () => {
         const response = await api().Apod().get(key);
         const json = await response.json();
         expect(response.status).toEqual(200);
-        expect(json.url).toEqual('https://apod.nasa.gov/apod/image/2206/Veil_Stocks_1080.jpg');
+        expect(json.url).toContain('https://apod.nasa.gov/apod/image/2206/');
     });
 
-    test('Проверяем ошибку для ручки apod без api_key', async () => {
+    test('Получаем астрономическую картинку дня без api_key', async () => {
         const response = await api().Apod().get();
         const json = await response.json();
         expect(response.status).toEqual(403);

@@ -30,14 +30,17 @@
     "@faker-js/faker": "^6.1.2",
     "babel-eslint": "^10.1.0",
     "babel-jest": "^27.5.1",
+    "chai": "^4.3.6",
     "eslint": "^7.32.0",
     "eslint-config-airbnb-base": "^14.2.1",
     "eslint-plugin-import": "^2.25.4",
     "eslint-plugin-jest": "^24.7.0",
     "husky": "^7.0.4",
     "jest-cli": "^27.5.1",
+    "jest-html-reporters": "^3.0.9",
     "lint-staged": "^11.2.6",
     "node-fetch": "^2.6.7",
+    "playwright": "^1.22.2",
     "supertest": "^6.2.2"
   }
 }
