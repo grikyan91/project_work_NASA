@@ -1,0 +1,1 @@
+{"total":2,"items":[{"uid":"fc9f03b6c4d584e31fff376d632a640a","name":"API тесты на сервис NASA","statistic":{"failed":3,"broken":0,"skipped":0,"passed":2,"unknown":0,"total":5}},{"uid":"b475ff0fe74db9306018de0215151ff4","name":"UI тесты для NasaApi","statistic":{"failed":0,"broken":0,"skipped":0,"passed":5,"unknown":0,"total":5}}]}
