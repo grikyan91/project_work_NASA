@@ -1,7 +1,5 @@
 import api from '../framework/services';
 
-const key = 'IReNjm77Udih92Y0FlPBgFD82N6Dl3tf7QAvSsXZ';
-
 describe('API тесты на сервис NASA', () => {
     
     test('Получаем астрономическую картинку дня', async () => {

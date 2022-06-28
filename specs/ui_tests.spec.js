@@ -6,6 +6,8 @@ const { faker } = require('@faker-js/faker');
 
 const assert = chai.assert;
 
+const browseAPI = '#headerContent > li:nth-child(5) > a';
+
 describe ('UI тесты для NasaApi', () => {
     let page;
 
@@ -17,7 +19,6 @@ describe ('UI тесты для NasaApi', () => {
     });
 
     it ('Проверяем активизацию таба в шапке', async () => {
-        const browseAPI = '#headerContent > li:nth-child(5) > a';
         const activeHeader = await app().Header().getActiveTab(page, browseAPI);
         assert.equal(activeHeader, 'usa-nav-link currentDiv' , 'После клика на таб он не стал активен');
     });

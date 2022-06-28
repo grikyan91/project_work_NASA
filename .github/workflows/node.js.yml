@@ -25,6 +25,8 @@ jobs:
         cache: 'npm'
     - run: npm install
     - run: npm test
+      env:
+        key: ${{ secrets.KEY }}
     
     - name: Get Allure history
       uses: actions/checkout@v2
