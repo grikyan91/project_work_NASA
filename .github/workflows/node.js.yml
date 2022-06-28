@@ -23,15 +23,14 @@ jobs:
       with:
         node-version: ${{ matrix.node-version }}
         cache: 'npm'
+    - name: variables
+      uses: microsoft/variable-substitution@v1 
+      with:
+        files: 'apiKey.json'
+      env:
+        key: ${{ secrets.KEY }}
     - run: npm install
     - run: npm test
-
-    - uses: actions/checkout@v2
-    - uses: microsoft/variable-substitution@v1 
-    with:
-        files: 'api_tests.spec.js'
-    env:
-        key: ${{ secrets.KEY }}
     
     - name: Get Allure history
       uses: actions/checkout@v2
