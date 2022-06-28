@@ -23,10 +23,10 @@ jobs:
       with:
         node-version: ${{ matrix.node-version }}
         cache: 'npm'
-    - run: npm install
-    - run: npm test
       env:
         key: ${{ secrets.KEY }}
+    - run: npm install
+    - run: npm test
     
     - name: Get Allure history
       uses: actions/checkout@v2
