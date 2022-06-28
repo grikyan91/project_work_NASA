@@ -23,12 +23,6 @@ jobs:
       with:
         node-version: ${{ matrix.node-version }}
         cache: 'npm'
-    - name: variables
-      uses: microsoft/variable-substitution@v1 
-      with:
-        files: 'apiKey.json'
-      env:
-        key: ${{ secrets.KEY }}
     - run: npm install
     - run: npm test
     
