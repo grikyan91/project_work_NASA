@@ -1,8 +1,10 @@
+const browseAPI = '#headerContent > li:nth-child(5) > a';
+
 const Header = {
-    getActiveTab: async (page, tab) => {
-        await page.click(tab);
+    getActiveTab: async (page) => {
+        await page.click(browseAPI);
         await page.waitForTimeout(1000);
-        const element = await page.locator(tab);
+        const element = await page.locator(browseAPI);
         const className = await element.getAttribute('class');
         return className;
     },
